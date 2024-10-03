@@ -1,26 +1,22 @@
 from flask import Flask
 from flask_cors import CORS
-from models import db  # Ensure your models are properly defined
-from routes import routes  # Ensure routes are properly defined in routes.py
+from models import db  # Ensure this is the correct import
+from routes import routes
 from config import Config
-from flask_migrate import Migrate  # Import Flask-Migrate
+from flask_migrate import Migrate
 
-# Create a Flask application instance
 app = Flask(__name__)
-
-# Load configuration from the Config class
 app.config.from_object(Config)
 
-# Initialize database and CORS
+# Initialize extensions
 db.init_app(app)
 CORS(app)
 
-# Initialize Flask-Migrate for database migrations
+# Initialize Flask-Migrate
 migrate = Migrate(app, db)
 
 # Register blueprints
 app.register_blueprint(routes)
 
-# Run the application in debug mode if executed directly
 if __name__ == '__main__':
     app.run(debug=True)
