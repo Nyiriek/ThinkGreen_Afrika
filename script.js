@@ -44,3 +44,22 @@ signupButton.addEventListener('click', () => {
         alert('Please enter your email!');
     }
 });
+
+
+// Function to handle the dropdown menu
+document.querySelector('.dropdown-toggle').addEventListener('click', function() {
+    const dropdownMenu = this.nextElementSibling;  // Select the dropdown menu after the button
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// close the dropdown if clicked outside of it
+document.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+    // Close dropdown if clicked outside
+    if (!dropdown.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+
