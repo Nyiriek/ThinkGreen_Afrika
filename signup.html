@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico" type="image">
+    <link rel="stylesheet" href="/styles/register.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.png" alt="ThinkGreen logo">
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn">Login</button>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="register-card">
+                <div class="logo-container">
+                    <img src="/images/thinkgreen_afrika_logo.png" alt="ThinkGreen logo">
+                </div>
+                
+                <form class="register-form">
+                    <div class="input-group">
+                        <input type="text" class="text" placeholder="First Name" required>
+                        <input type="text" class="text" placeholder="Last Name" required>
+                        <input type="email" class="text" placeholder="Email" required>
+                        <input type="username" class="text" placeholder="username" required>
+                        <input type="password" class="password" placeholder="Password" required>
+                        <input type="Confirm password" class="password" placeholder="Confirm Password" required>
+                    </div>
+
+                    <button type="submit" class="register-btn">Register</button>
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn google" title="Login with Google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn facebook" title="Login with Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button type="button" class="social-btn apple" title="Login with Apple">
+                            <i class="fab fa-apple"></i>
+                        </button>
+                        <button type="button" class="social-btn linkedin" title="Login with LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                    </div>
+
+                    <div class="login-link">
+                        <span>Already have an account? </span>
+                        <a href="login.html">Log into your account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Empowering the leaders of <br>
+                    Tomorrow for a Sustainable Future</h1>
+                <p>“Explore resources, and courses on environmental leadership and sustainability.”</p>
+                <div class="hero-buttons">
+                    <button class="white-btn">Get Started</button>
+                    <button class="yellow-btn">Explore Courses</button>
+                </div>
+            </div>
+        </section>
+        <div class="image">
+            <img src="/images/leaf2.png" alt="leaf 2">
+        </div>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <br>
+                <div class="about-image1">
+                    <img src="/images/Rectangle 8.png" alt="Image 1">
+                    <div class="about-image2">
+                        <img src="/images/Rectangle 6.png" alt="Image 2">
+                        <div class="about-image3">
+                            <img src="/images/Rectangle 7.png" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+                <h5>
+                    <p><strong>Welcome to GreenPath Academy –<br>
+                            Your Gateway to Environmental Leadership and Sustainability!
+                    </p></strong>
+                </h5>
+                <br>
+                <p>At ThinkGreen Afrika, We empower individuals and organizations to make a positive impact on our
+                    <strong>planet</strong>. <br>
+                    Our portal offers resources and interactive courses to equip you with the <strong>knowledge &
+                        tools</strong> needed to lead in the fight for <strong>sustainability</strong>. Whether you're
+                    an experienced advocate or just starting out, you'll find valuable insights and strategies to drive
+                    meaningful change. Join our <strong>community</strong> and be part of the global movement for a
+                    <strong>sustainable future</strong>. <br>
+                    Let's get started!
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Location, City, Country</p>
+                    <p><i class="fas fa-envelope"></i> info@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +012 345 6789</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/courses.html">Courses</a></li>
+                        <li><a href="/resources.html">Resources</a></li>
+                        <li><a href="/community.html">Community</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter</p>
+                    <input type="text" placeholder="Your email">
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

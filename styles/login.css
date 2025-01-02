@@ -1,0 +1,585 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3)50%, rgba(0, 0, 0, 0.3)50%); */
+    width: 1350px;
+    height: 200px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+    background-color: #ffffff;
+    color: #464646;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Header icons (alert, profile, dropdown) */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.header-icons .profile-image {
+    width: 60px;
+    height: 60px;
+}
+
+.profile-image {
+    width: 40px;
+    /* Makes the profile image slightly larger */
+    height: 40px;
+    border-radius: 50%;
+    /* Makes the profile image circular */
+}
+
+/* Logo */
+.logo img {
+    width: 200px;
+}
+
+/* Navbar */
+.nav {
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 50px;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: space-around;
+    gap: 30px;
+    color: #464646;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #398c20;
+    /* Hover effect */
+}
+
+.navbar li a:active {
+    color: #398c20;
+    /* Active link */
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #245e30;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    width: 150px;
+    height: 55px;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .login-btn {
+        margin-top: 10px;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/images/advantages-of-environmental-sustainability\ 1.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h1 {
+    font-size: 45px;
+    font-weight: medium;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+
+.hero .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    gap: 30px;
+}
+
+.white-btn {
+    background-color: white;
+    height: 60px;
+    width: 180px;
+    color: #245E30;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.yellow-btn {
+    border-radius: 10px;
+    background-color: #ffd700;
+    color: white;
+    height: 60px;
+    width: 180px;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+}
+
+.yellow-btn:hover {
+    background-color: #464646;
+    color: #fff;
+    font-size: 19px;
+}
+
+.white-btn:hover {
+    background-color: #464646;
+    color: #fff;
+    font-size: 20px;
+}
+
+.image {
+    width: 240px;
+    height: 200px;
+    margin-left: 1095px;
+    margin-top: -100px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+    background-color: #fff;
+}
+
+.about-content {
+    width: 100%;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    padding-left: 500px;
+}
+
+.about-content .about-image1 {
+    margin-top: -120px;
+    margin-right: 20px;
+}
+
+.about-content .about-image2 {
+    max-width: 200px;
+    margin-top: -100px;
+    margin-left: 40px;
+}
+
+.about-content .about-image3 {
+    margin-top: -180px;
+    margin-left: 230px;
+    margin-bottom: 20px;
+}
+
+.about-content h5 {
+    font-size: 1.5rem;
+    margin-top: 120px;
+    margin-bottom: 500px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-left: 65%;
+    margin-top: -500px;
+}
+
+.about-content p strong {
+    color: #398c20;
+}
+
+/* Footer Section */
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-color: #245e30;
+    color: white;
+    margin-top: 14.3rem;
+    padding: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-phone-alt {
+    transform: rotate(90deg);
+}
+
+.footer-column h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: white;
+}
+
+.footer-column a:hover {
+    color: #42b642;
+}
+
+.signup-btn {
+    background-color: #42b642;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 9px;
+    width: 100px;
+    margin-left: -5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: #fff;
+    width: 200px;
+}
+
+/* styles/login.css */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 5rem;
+    border-radius: 15px;
+    width: 600px;
+    max-width: 700px;
+    height: 600px;
+    position: relative;
+}
+
+.login-card {
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: -12rem;
+    margin-left: 3rem;
+}
+
+.logo-container img {
+    width: 300px;
+    height: 350px;
+}
+
+.login-form {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    margin-top: -10rem;
+    gap: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group input {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-group .text {
+    width: 400px;
+}
+
+.input-group .password {
+    width: 400px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #245e30;
+    box-shadow: 0 0 0 2px rgba(36, 94, 48, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.forgot-password {
+    color: #245e30;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-submit-btn {
+    background-color: #245e30;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    width: 250px;
+    margin-left: 5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-submit-btn:hover {
+    background-color: #45a049;
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin-top: -1rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 1.5rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: -1.5rem;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fa-linkedin-in,
+.fa-apple,
+.fa-facebook-f,
+.fa-google {
+    font-size: 1.8rem;
+}
+
+.social-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.social-btn.google i {
+    background: conic-gradient(
+        from -45deg,
+        #4285f4 110deg, /* Google Blue */
+        #34a853 110deg 200deg, /* Google Green */
+        #fbbc05 200deg 290deg, /* Google Yellow */
+        #ea4335 290deg /* Google Red */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-btn.facebook i {
+    color: #4267B2;
+}
+
+.social-btn.apple i {
+    color: #000000;
+}
+
+.social-btn.linkedin i {
+    color: #0077B5;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -1rem;
+}
+
+.register-link span {
+    color: #666;
+}
+
+.register-link a {
+    color: #FFB020;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .social-login {
+        gap: 0.75rem;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+    }
+}

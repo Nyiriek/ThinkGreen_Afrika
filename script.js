@@ -1,4 +1,7 @@
-// script.js
+function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+}
 
 // Function to handle the "Read More" button clicks
 const readMoreButtons = document.querySelectorAll('.read-more-btn');
@@ -11,7 +14,7 @@ readMoreButtons.forEach(button => {
 // Function to handle "Explore" button click in the community section
 const exploreButton = document.querySelector('.explore-btn');
 exploreButton.addEventListener('click', () => {
-    alert('Exploring community features...');
+    ('/community.html'); // Redirect to the community page
 });
 
 // Function to handle "Get Started" button click
@@ -63,3 +66,57 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// Scrollable Arrows
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.testimonial-cards');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    
+    // Calculate cards visible
+    const cardWidth = document.querySelector('.testimonial-card').offsetWidth;
+    const containerWidth = container.offsetWidth;
+    const cardsVisible = Math.floor(containerWidth / cardWidth);
+    
+    // Calculate scroll amount (one card width plus gap)
+    const scrollAmount = cardWidth + 20; // 15px is the gap between cards
+
+    let currentPosition = 0;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    leftArrow.addEventListener('click', () => {
+        currentPosition = Math.max(currentPosition - scrollAmount, 0);
+        container.scrollTo({
+            left: currentPosition,
+            behavior: 'smooth'
+        });
+        updateArrowVisibility();
+    });
+
+    rightArrow.addEventListener('click', () => {
+        currentPosition = Math.min(currentPosition + scrollAmount, maxScroll);
+        container.scrollTo({
+            left: currentPosition,
+            behavior: 'smooth'
+        });
+        updateArrowVisibility();
+    });
+
+    function updateArrowVisibility() {
+        // Hide left arrow if at the start
+        leftArrow.style.opacity = currentPosition <= 0 ? '0.5' : '1';
+        leftArrow.style.cursor = currentPosition <= 0 ? 'default' : 'pointer';
+
+        // Hide right arrow if at the end
+        rightArrow.style.opacity = currentPosition >= maxScroll ? '0.5' : '1';
+        rightArrow.style.cursor = currentPosition >= maxScroll ? 'default' : 'pointer';
+    }
+
+    // Initial arrow visibility
+    updateArrowVisibility();
+
+    // Update on window resize
+    window.addEventListener('resize', () => {
+        maxScroll = container.scrollWidth - container.clientWidth;
+        updateArrowVisibility();
+    });
+});
